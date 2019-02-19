@@ -9,10 +9,15 @@
  * @author raphael.schoeni
  */
 public class StringCalculator {
-	
-	public StringCalculator(String number){};
-
 	private int sum;
+	
+	public StringCalculator(String number){
+	
+	if ("".equals(number)){
+		sum =0;
+	}};
+
+	
 	
 	
 	

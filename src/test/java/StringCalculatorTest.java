@@ -18,7 +18,6 @@ import org.junit.Test;
 public class StringCalculatorTest {
 	
 	private StringCalculator sc;
-	private int sum;
 	
  @Before
   public void setup(){
@@ -26,10 +25,10 @@ public class StringCalculatorTest {
 	
 	
  @Test
-  public void testAddEmpty(String numbers) {
+  public void testAddEmpty() {
     // Arrange
+	long expected = 0;
     StringCalculator sc = new StringCalculator("");
-    long expected = 0;
     // Act
     long actual = sc.getSum();
     // Assert
