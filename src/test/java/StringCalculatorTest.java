@@ -81,4 +81,15 @@ public class StringCalculatorTest {
 		// Assert
 		assertThat(actual, is(expected));
 	}
+//test avec X digites séparé par un délimitateur personnel
+	@Test
+	public void testAddXFreeDelimiter() {
+		// Arrange
+		long expected = 1 + 3 + 5 + 8 + 10;
+		StringCalculator sc = new StringCalculator("//;\n1;3;5;8;10");
+		// Act
+		long actual = sc.getSum();
+		// Assert
+		assertThat(actual, is(expected));
+	}
 }
