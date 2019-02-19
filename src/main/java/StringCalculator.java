@@ -10,4 +10,14 @@
  */
 public class StringCalculator {
 	
+	public StringCalculator(String number){};
+
+	private int sum;
+	
+	
+	
+public int getSum(){
+	return sum;
+}
+	
 }
