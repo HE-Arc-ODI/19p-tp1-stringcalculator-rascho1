@@ -34,4 +34,15 @@ public class StringCalculatorTest {
     // Assert
     assertThat(actual, is(expected));
 }
+  
+ @Test
+  public void testAddone() {
+    // Arrange
+	long expected = 1;
+    StringCalculator sc = new StringCalculator("");
+    // Act
+    long actual = sc.getSum();
+    // Assert
+    assertThat(actual, is(expected));
+}
 }
