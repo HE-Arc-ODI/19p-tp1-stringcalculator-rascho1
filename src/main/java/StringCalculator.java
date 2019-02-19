@@ -1,3 +1,6 @@
+
+import static java.lang.Integer.parseInt;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,12 +13,23 @@
  */
 public class StringCalculator {
 	private int sum;
+	private int longu;
 	
 	public StringCalculator(String number){
 	
-	if ("".equals(number)){
+	
+	if (!"".equals(number)){
+		longu = String.valueOf(number).length();
+		if (longu == 1) {
+			sum=parseInt(number);
+		}
+			else if ("".equals(number)){
 		sum =0;
-	}};
+	}
+		
+			
+		}
+	}
 
 	
 	

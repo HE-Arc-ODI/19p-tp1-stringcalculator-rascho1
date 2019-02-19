@@ -23,7 +23,7 @@ public class StringCalculatorTest {
   public void setup(){
   }
 	
-	
+//test ensemble vide
  @Test
   public void testAddEmpty() {
     // Arrange
@@ -34,12 +34,12 @@ public class StringCalculatorTest {
     // Assert
     assertThat(actual, is(expected));
 }
-  
+//test avec une digite
  @Test
   public void testAddone() {
     // Arrange
 	long expected = 1;
-    StringCalculator sc = new StringCalculator("");
+    StringCalculator sc = new StringCalculator("1");
     // Act
     long actual = sc.getSum();
     // Assert
