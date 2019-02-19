@@ -10,51 +10,75 @@ import org.junit.Test;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author raphael.schoeni
  */
 public class StringCalculatorTest {
-	
+
 	private StringCalculator sc;
-	
- @Before
-  public void setup(){
-  }
-	
+
+	@Before
+	public void setup() {
+	}
+
 //test ensemble vide
- @Test
-  public void testAddEmpty() {
-    // Arrange
-	long expected = 0;
-    StringCalculator sc = new StringCalculator("");
-    // Act
-    long actual = sc.getSum();
-    // Assert
-    assertThat(actual, is(expected));
-}
+	@Test
+	public void testAddEmpty() {
+		// Arrange
+		long expected = 0;
+		StringCalculator sc = new StringCalculator("");
+		// Act
+		long actual = sc.getSum();
+		// Assert
+		assertThat(actual, is(expected));
+	}
 //test avec une digite
- @Test
-  public void testAddone() {
-    // Arrange
-	long expected = 1;
-    StringCalculator sc = new StringCalculator("1");
-    // Act
-    long actual = sc.getSum();
-    // Assert
-    assertThat(actual, is(expected));
-}
+
+	@Test
+	public void testAddone() {
+		// Arrange
+		long expected = 1;
+		StringCalculator sc = new StringCalculator("1");
+		// Act
+		long actual = sc.getSum();
+		// Assert
+		assertThat(actual, is(expected));
+	}
 
 //test avec deux digites séparé par une virgule
- @Test
-  public void testAdd2() {
-    // Arrange
-	long expected = 1+3;
-    StringCalculator sc = new StringCalculator("1,3");
-    // Act
-    long actual = sc.getSum();
-    // Assert
-    assertThat(actual, is(expected));
-}
+	@Test
+	public void testAdd2() {
+		// Arrange
+		long expected = 1 + 3;
+		StringCalculator sc = new StringCalculator("1,3");
+		// Act
+		long actual = sc.getSum();
+		// Assert
+		assertThat(actual, is(expected));
+	}
+	
+//test avec X digites séparé par une virgule
+	@Test
+	public void testAddX() {
+		// Arrange
+		long expected = 1 + 3 + 5 + 8 + 10 + 2548;
+		StringCalculator sc = new StringCalculator("1,3,5,8,10,2548");
+		// Act
+		long actual = sc.getSum();
+		// Assert
+		assertThat(actual, is(expected));
+	}
+	
+//test avec X digites séparé par une virgule et/ou un espace(\n)
+	@Test
+	public void testAddXmultiDelimiter() {
+		// Arrange
+		long expected = 1 + 3 + 5 + 8 + 10 + 2548;
+		StringCalculator sc = new StringCalculator("1,3,5\n8,10,2548");
+		// Act
+		long actual = sc.getSum();
+		// Assert
+		assertThat(actual, is(expected));
+	}
 }

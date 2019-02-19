@@ -21,7 +21,7 @@ public class StringCalculator {
 	if (!"".equals(number)){
 		
 		
-		String delims = "[,]";
+		String delims = "[,;\n]";
 		String[] totDigits = number.split(delims);
 		for (int i = 0; i < totDigits.length; i++) {
 			sum = sum+ parseInt(totDigits[i]);
