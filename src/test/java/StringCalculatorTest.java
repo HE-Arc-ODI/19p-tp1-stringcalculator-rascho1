@@ -45,4 +45,16 @@ public class StringCalculatorTest {
     // Assert
     assertThat(actual, is(expected));
 }
+
+//test avec deux digites séparé par une virgule
+ @Test
+  public void testAdd2() {
+    // Arrange
+	long expected = 1+3;
+    StringCalculator sc = new StringCalculator("1,3");
+    // Act
+    long actual = sc.getSum();
+    // Assert
+    assertThat(actual, is(expected));
+}
 }

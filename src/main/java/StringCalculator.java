@@ -19,17 +19,23 @@ public class StringCalculator {
 	
 	
 	if (!"".equals(number)){
-		longu = String.valueOf(number).length();
-		if (longu == 1) {
-			sum=parseInt(number);
+		
+		
+		String delims = "[,]";
+		String[] totDigits = number.split(delims);
+		for (int i = 0; i < totDigits.length; i++) {
+			sum = sum+ parseInt(totDigits[i]);
+			
 		}
-			else if ("".equals(number)){
+
+
+	}	else if ("".equals(number)){
 		sum =0;
 	}
 		
 			
 		}
-	}
+	
 
 	
 	
