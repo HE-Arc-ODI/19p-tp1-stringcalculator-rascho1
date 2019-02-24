@@ -13,13 +13,12 @@ import static java.lang.Integer.parseInt;
 public class StringCalculator {
 
 	private int sum = 0;
-	private int longu;
+
 	private String testeDelim;
-	private String endDelim;
+
 	private int pos;
 	private String delims;
 	private String reste;
-	private int teste;
 
 	public StringCalculator(String number) {
 
@@ -33,31 +32,26 @@ public class StringCalculator {
 
 					reste = number.substring(pos + 1);
 					String numbers = reste.replace(delims, ";");
-				
+
 					String delimi = "[;]";
 
 					String[] totDigits = numbers.split(delimi);
-					for (int i = 0; i < totDigits.length; i++) {
-					/*	 teste = parseInt(totDigits[i]);
-						if (teste >1000){
-							sum = sum+1;
-						}else{*/
-						sum = sum + test1000(parseInt(totDigits[i]));
+					for (String totDigit : totDigits) {
+						sum = sum + test1000(parseInt(totDigit));
 					}
-					
 
 				} else {
 					String delimi = "[,;\n]";
 					String[] totDigits = number.split(delimi);
-					for (int i = 0; i < totDigits.length; i++) {
-						sum = sum + parseInt(totDigits[i]);
+					for (String totDigit : totDigits) {
+						sum = sum + parseInt(totDigit);
 					}
 				}
 			} else if (number.length() == 1) {
 				sum = parseInt(number);
 			}
 
-		}  else if ("".equals(number)) {
+		} else if ("".equals(number)) {
 			sum = 0;
 		}
 
@@ -66,25 +60,15 @@ public class StringCalculator {
 	public int getSum() {
 		return sum;
 	}
-	public int test1000(int numb){
+
+	public int test1000(int numb) {
 		int res;
-	if (numb>1000){
-		res = 1;
+		if (numb > 1000) {
+			res = 1;
+		} else {
+			res = numb;
+		}
+		return res;
 	}
-	else{ res=numb;
-	}
-	return res;
-	};
 
-/*	public static void main(String[] args) {
-		String teste2 = "Bonjo.ur les";
-		String teste1 = teste2.substring(5 + 1);
-		int post = teste2.indexOf(".");
-		String teste3 = teste2.substring(5 + 1);
-		int posisi = teste2.indexOf("B");
-
-		System.out.println(teste1);
-		System.out.println(post);
-
-	}*/
 }
