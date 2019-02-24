@@ -86,7 +86,7 @@ public class StringCalculatorTest {
 	public void testAddXFreeDelimiter() {
 		// Arrange
 		long expected = 1 + 3 + 5 + 8 + 10;
-		StringCalculator sc = new StringCalculator("//;\n1;3;5;8;10");
+		StringCalculator sc = new StringCalculator("//..\n1..3..5..8..10");
 		// Act
 		long actual = sc.getSum();
 		// Assert

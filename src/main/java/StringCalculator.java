@@ -19,8 +19,11 @@ public class StringCalculator {
 	private int pos;
 	private String delims;
 	private String reste;
+
+	
 	
 	public StringCalculator(String number){
+		
 	
 	
 	if (!" ".equals(number)){
@@ -29,12 +32,16 @@ public class StringCalculator {
 			
 			
 				 if (testeDelim.equals("//")){
-						pos = number.indexOf(" ");
-						delims = number.substring(2,pos);	
-						reste = number.substring(pos+1);
+						pos = number.indexOf("\n");
+						delims = number.substring(2,pos);
 						
-						String delimi = "[delims]";
-						String[] totDigits = reste.split(delimi);
+						reste = number.substring(pos+1);
+						String numbers = reste.replace(delims,";");
+						/*String delimi = "["+delims+"]";*/
+						String delimi = "[;]";
+						
+						String[] totDigits = numbers.split(delimi);
+					/*	String[] totDigits = StringUtils.split(reste,delimi);*/
 						for (int i = 0; i < totDigits.length; i++) {
 							sum = sum+ parseInt(totDigits[i]);	
 							}
@@ -71,11 +78,14 @@ public int getSum(){
 }
 
 public static void main(String[] args) {
-		String teste2 = "Bonjour les";
-		int post = teste2.indexOf(" ");
-		String teste3 = teste2.substring(post+1);
+		String teste2 = "Bonjo.ur les";
+		String teste1 = teste2.substring(5+1);
+		int post = teste2.indexOf(".");
+		String teste3 = teste2.substring(5+1);
 		int posisi = teste2.indexOf("B");
-		
-		System.out.println(teste3);
+	
+		System.out.println(teste1);
+		System.out.println(post);
+	
 	}
 }
