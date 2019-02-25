@@ -13,7 +13,7 @@ import static java.lang.Integer.parseInt;
 public class StringCalculator {
 
 	private int sum = 0;
-
+/* hello*/
 	private String testeDelim;
 
 	private int pos;
