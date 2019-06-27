@@ -21,8 +21,12 @@ public class StringCalculator {
     private String reste;
 
     public StringCalculator() {
-
     }
+
+    public StringCalculator(String number) {
+       int resulut = add(number);
+    }
+
 
     public int add(String number) {
         if (!" ".equals(number)) {

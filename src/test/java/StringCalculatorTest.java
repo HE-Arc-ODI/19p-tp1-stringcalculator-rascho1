@@ -53,7 +53,8 @@ public class StringCalculatorTest {
 	public void testAdd2() {
 		// Arrange
 		long expected = 1 + 3;
-		StringCalculator sc = new StringCalculator("1,3");
+		StringCalculator sc = new StringCalculator();
+		sc.add("1,3");
 		// Act
 		long actual = sc.getSum();
 		// Assert
@@ -65,7 +66,8 @@ public class StringCalculatorTest {
 	public void testAddX() {
 		// Arrange
 		long expected = 1 + 3 + 5 + 8 + 10 + 2548;
-		StringCalculator sc = new StringCalculator("1,3,5,8,10,2548");
+		StringCalculator sc = new StringCalculator();
+		sc.add("1,3,5,8,10,2548");
 		// Act
 		long actual = sc.getSum();
 		// Assert
@@ -77,7 +79,8 @@ public class StringCalculatorTest {
 	public void testAddXmultiDelimiter() {
 		// Arrange
 		long expected = 1 + 3 + 5 + 8 + 10 + 2548;
-		StringCalculator sc = new StringCalculator("1,3,5\n8,10,2548");
+		StringCalculator sc = new StringCalculator();
+		sc.add("1,3,5\n8,10,2548");
 		// Act
 		long actual = sc.getSum();
 		// Assert
@@ -88,7 +91,8 @@ public class StringCalculatorTest {
 	public void testAddXFreeDelimiter() {
 		// Arrange
 		long expected = 1 + 3 + 5 + 8 + 10;
-		StringCalculator sc = new StringCalculator("//..KL\n1..KL3..KL5..KL8..KL10");
+		StringCalculator sc = new StringCalculator();
+		sc.add("//..KL\n1..KL3..KL5..KL8..KL10");
 		// Act
 		long actual = sc.getSum();
 		// Assert
