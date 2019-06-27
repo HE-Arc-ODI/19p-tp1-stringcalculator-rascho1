@@ -27,7 +27,8 @@ public class StringCalculatorTest {
 	public void testAddEmpty() {
 		// Arrange
 		long expected = 0;
-		StringCalculator sc = new StringCalculator("");
+		StringCalculator sc = new StringCalculator();
+		sc.add("");
 		// Act
 		long actual = sc.getSum();
 		// Assert
@@ -39,7 +40,8 @@ public class StringCalculatorTest {
 	public void testAddone() {
 		// Arrange
 		long expected = 1;
-		StringCalculator sc = new StringCalculator("1");
+		StringCalculator sc = new StringCalculator();
+		sc.add("1");
 		// Act
 		long actual = sc.getSum();
 		// Assert

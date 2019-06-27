@@ -12,19 +12,19 @@ import static java.lang.Integer.parseInt;
  */
 public class StringCalculator {
 
-	private int sum = 0;
-/* hello*/
-	private String testeDelim;
+    private int sum = 0;
+    /* hello*/
+    private String testeDelim;
 
-	private int pos;
-	private String delims;
-	private String reste;
+    private int pos;
+    private String delims;
+    private String reste;
 
-	public StringCalculator() {
+    public StringCalculator() {
 
-	}
+    }
 
-	public int add(String number) {
+    public int add(String number) {
         if (!" ".equals(number)) {
             if (number.length() >= 2) {
                 testeDelim = number.substring(0, 2);
@@ -59,18 +59,22 @@ public class StringCalculator {
         }
 
         //todo modify
-        return null;
+           return sum;
+
+
     }
 
+    public int test1000(int numb){
+        int result;
+        if (numb > 1000) {
+            result = 1;
+        } else {
+            result = numb;
+        }
+        return result;
+    }
 
-	public int test1000(int numb) {
-		int res;
-		if (numb > 1000) {
-			res = 1;
-		} else {
-			res = numb;
-		}
-		return res;
-	}
-
+    public int getSum() {
+        return sum;
+    }
 }
